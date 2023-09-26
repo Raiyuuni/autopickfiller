@@ -11,7 +11,7 @@ AutoPickFiller makes this process automatic by exporting the reference layer as 
 ## Installation
 Download both .inx and .py files and move them to Inkscape's user extensions directory.
 
-In Inkscape 1.3, it can be located at: `Edit > Preferences > System: User extensions`.
+In Inkscape 1.3, it can be located at: `Edit > Preferences > System: User extensions`
 
 Restart Inkscape to make the new extension available.
 
