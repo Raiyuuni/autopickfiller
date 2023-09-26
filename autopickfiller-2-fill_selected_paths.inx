@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+  <name>2 - Fill Selected Paths</name>
+  <id>net.raiyuuni.auto_pick_filler.fill_selected_paths</id>
+  <effect>
+    <effects-menu>
+      <submenu name="Color">
+        <submenu name="Auto Pick Filler" />
+      </submenu>
+    </effects-menu>
+  </effect>
+  <script>
+    <command location="inx" interpreter="python">autopickfiller-2-fill_selected_paths.py</command>
+  </script>
+</inkscape-extension>

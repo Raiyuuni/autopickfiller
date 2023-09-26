@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+  <name>1 - Export Background</name>
+  <id>net.raiyuuni.auto_pick_filler.export_bg</id>
+  <param name="tab" type="notebook">
+    <page name="Options" gui-text="Options">
+      <param name="bg_layer" type="string" gui-text="Background Layer:" gui-description="Default: Layer 1"></param>
+    </page>
+    <page name="About" gui-text="About">
+      <label xml:space="preserve">This extension exports the selected layer to your svg file's directory as an image ("apf_tempbg.png").
+Upon completion, this script will throw a ResourceWarning exception. It can be safely ignored.
+The temporary files will be automatically deleted after running "Fill Selected Paths".
+
+More information in:</label>
+<label appearance="url">https://www.google.com/</label>
+    </page>
+  </param>
+  <effect>
+    <effects-menu>
+      <submenu name="Color">
+        <submenu name="Auto Pick Filler" />
+      </submenu>
+    </effects-menu>
+  </effect>
+  <script>
+    <command location="inx" interpreter="python">autopickfiller-1-export_bg.py</command>
+  </script>
+</inkscape-extension>
