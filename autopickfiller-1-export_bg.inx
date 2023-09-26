@@ -12,7 +12,7 @@ Upon completion, this script will throw a ResourceWarning exception. It can be s
 The temporary files will be automatically deleted after running "Fill Selected Paths".
 
 More information in:</label>
-<label appearance="url">https://www.google.com/</label>
+<label appearance="url">https://github.com/Raiyuuni/autopickfiller/</label>
     </page>
   </param>
   <effect>
