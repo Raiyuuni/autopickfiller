@@ -52,7 +52,12 @@ Select all paths to be recolored and run the second script. No further action is
 </details>
 
 ## Limitations
-test
+**Export Background**
+- This script runs a simple test to locate `Inkscape.exe` using its built-in Python interpreter as a reference. In a default Windows 10 installation, both programs are located in the same folder.
+- If `Inkscape.exe` isn't found, the script defaults to calling it via an environment variable, which may need to be manually set up.
+
+**Fill Selected Paths**
+- This script can only convert **paths** made out of **straight line segments**. It will not work on shapes, Bézier curves or arcs.
 
 ## Credits
 - regebro, author of [svg.path](https://github.com/jespino/inkscape-export-layers)
