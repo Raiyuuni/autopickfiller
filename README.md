@@ -24,14 +24,19 @@ AutoPickFiller is located in `Extensions > Color > Auto Pick Filler`, where it's
 - Write down the name of your reference layer.
 - If the field is left blank, the script assumes the reference layer is `Layer 1`.
 
-
+---
 
 ![](https://github.com/Raiyuuni/autopickfiller/assets/65428607/3f5df713-8d14-4834-ab3e-dc7f74bd4763)
 
 When the first script is complete, a new window will pop up reporting a ResourceWarning exception. Dismiss it and close the extension's window.
 - The script uses an Inkscape subprocess to export the background layer. The exception happens because the script does not wait for (and ends before) the subprocess.
 
-You can check 
+You can check whether the script has run successfully by going to your current file's directory. Two new files have been generated:
+- A copy of your .svg file with all but the reference layer disabled
+- A .png file of your reference layer
+![](https://github.com/Raiyuuni/autopickfiller/assets/65428607/0ef86c3c-b4ee-4534-a7fb-7950e92d071c)
+
+Both of these files will be automatically deleted by the next script.
 
 
 
