@@ -60,5 +60,9 @@ Select all paths to be recolored and run the second script. No further action is
 - This script can only convert **paths** made out of **straight line segments**. It will not work on shapes, Bézier curves or arcs.
 
 ## Credits
-- regebro, author of [svg.path](https://github.com/jespino/inkscape-export-layers)
+- regebro, author of [svg.path](https://github.com/regebro/svg.path)
 - jespino, author of [Inkscape Export Layers](https://github.com/jespino/inkscape-export-layers)
+
+## Changelog
+- **2023.09.27 18:00 GMT -3**
+  - Fill Selected Paths: Color sample points are moved into the image's boundaries.
