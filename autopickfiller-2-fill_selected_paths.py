@@ -34,7 +34,7 @@ class AutoPickFiller_FillSelectedPaths(inkex.EffectExtension):
                     newToken = ("L", token[1])
         
                 elif token[0] == "m":
-                    newToken = ("L", token[1])
+                    newToken = ("l", token[1])
                 
                 else:
                     newToken = token
@@ -116,6 +116,10 @@ class AutoPickFiller_FillSelectedPaths(inkex.EffectExtension):
             tokens2 = self._token_unchainer(tokens)
             tokens3 = self._convert_coordinates(tokens2)
             nodes = self._parse_nodes(tokens3)
+            self.msg(tokens)
+            self.msg(tokens2)
+            self.msg(tokens3)
+            self.msg(nodes)
             
             x = []
             y = []
@@ -127,6 +131,19 @@ class AutoPickFiller_FillSelectedPaths(inkex.EffectExtension):
             ym = sum(y)/len(y)
             xp = round((xm - x0) * scale) # Centroid coordinates - pixels. Rounded to use in getpixel.
             yp = round((ym - y0) * scale)
+            
+            width = self.svg.viewport_width
+            height = self.svg.viewport_height
+            
+            if xp < 0: # Check if the sample point is inside the image's boundaries
+                xp = 0
+            elif xp >= width: 
+                xp = width - 1
+            
+            if yp < 0:
+                yp = 0
+            elif yp >= height:
+                yp = height - 1
             
             r, g, b, a = im.getpixel((xp,yp)) # outputs RGBA values
             color = "rgb(%s, %s, %s)" % (r, g, b) # convert to RGB
